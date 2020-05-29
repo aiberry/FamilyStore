@@ -1,0 +1,43 @@
+<div class="products-list__inputs" id="products">
+  <label class="products-list__checkbox"
+    >Men
+    <input
+      type="checkbox"
+      ng-model="$ctrl.showCategory.men"
+      ng-click="$ctrl.showCategory.men = $ctrl.changeFilter('men')"
+    />
+    <span class="products-list__checkmark"></span>
+  </label>
+
+  <label class="products-list__checkbox"
+    >Women
+    <input
+      type="checkbox"
+      ng-model="$ctrl.showCategory.women"
+      ng-click="$ctrl.showCategory.women = $ctrl.changeFilter('women')"
+    />
+    <span class="products-list__checkmark"></span>
+  </label>
+
+  <label class="products-list__checkbox"
+    >childRobot
+    <input
+      type="checkbox"
+      ng-model="$ctrl.showCategory.child"
+      ng-click="$ctrl.showCategory.child = $ctrl.changeFilter('child')"
+    />
+    <span class="products-list__checkmark"></span>
+  </label>
+  <button class="products-list__button" ng-click="$ctrl.resetFilters()">
+    see all prodrobotoucts
+  </button>
+</div>
+
+<div class="products-list__items">
+  <product-item
+    ng-repeat="product in $ctrl.service.items | productsFilter: $ctrl.showCategory track by product.key"
+    item="product"
+    on-toggle="$ctrl.service.toggleTodo(product, $status)"
+  >
+  </product-item>
+</div>
