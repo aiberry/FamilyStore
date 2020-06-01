@@ -11,11 +11,11 @@ footer {
     display: flex;
     align-items: center;
     padding: 12px 64px;
-    & i {
+    &-icon {
       color: #424242;
       margin-right: 20px;
     }
-    & p {
+    &-text {
       color: #ffffff;
       font-size: 16px;
     }
@@ -36,7 +36,7 @@ footer {
       width: 94px;
       font-size: 20px;
     }
-    & p {
+    &-overal-info {
       width: 301px;
       font-size: 10px;
     }
@@ -74,12 +74,11 @@ footer {
 }
 
 @media screen and (min-width: 492px) and (max-width: 800px) {
-  
   .footer__main {
     flex-direction: column;
     padding: 25px 25px 30px 15px;
   }
-  .footer__texts p {
+  .footer__texts-overal-info {
     width: 100%;
     margin-bottom: 20px;
   }
@@ -93,9 +92,8 @@ footer {
     flex-direction: column;
     padding: 10px 10px 30px 10px;
   }
-  .footer__texts p {
+  .footer__texts-overal-info {
     width: 100%;
     margin-bottom: 20px;
   }
 }
-

@@ -12,46 +12,42 @@ body {
   font-weight: 400;
 }
 
-header-slide {
-  & > div {
-    color: white;
-    width: 100%;
-    height: 100vh;
-    display: inline-grid;
-    background-image: ~'url(../../assets/img/Livello_3.png)';
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    grid-template-columns: 5% 77% 6% 6% 6%;
-    grid-template-rows: 5% 5% 48% 33% 9%;
-    & > h1 {
-      font-family: Roboto;
-      font-size: 60px;
-      font-weight: 400;
-      grid-column: ~'1/6';
-      grid-row-end: 4;
-      justify-self: center;
-      align-self: end;
-      margin: 0;
-      text-align: center;
-    }
-    & > p {
-      width: 70%;
-      font-size: 20px;
-      grid-column: ~'1/6';
-      grid-row-end: 5;
-      justify-self: center;
-      text-align: center;
-    }
-    & a {
-      color: white;
-      font-size: 18px;
-      text-decoration: none;
-    }
-  }
-}
-
 .header-slide {
+  color: white;
+  width: 100%;
+  height: 100vh;
+  display: inline-grid;
+  background-image: ~'url(../../assets/img/Livello_3.png)';
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  grid-template-columns: 5% 77% 6% 6% 6%;
+  grid-template-rows: 5% 5% 48% 33% 9%;
+  & > h1 {
+    font-family: Roboto;
+    font-size: 60px;
+    font-weight: 400;
+    grid-column: ~'1/6';
+    grid-row-end: 4;
+    justify-self: center;
+    align-self: end;
+    margin: 0;
+    text-align: center;
+  }
+  &__undertext {
+    width: 70%;
+    font-size: 20px;
+    grid-column: ~'1/6';
+    grid-row-end: 5;
+    justify-self: center;
+    text-align: center;
+  }
+  & a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+  }
+
   &__boots {
     grid-column-start: 2;
     grid-row-start: 2;
@@ -94,38 +90,36 @@ header-slide {
 }
 
 @media screen and (min-width: 1000px) and (max-width: 1200px) {
-  header-slide > div {
+  .header-slide {
     grid-template-columns: 5% 68% 9% 9% 9%;
   }
 }
 
 @media screen and (min-width: 900px) and (max-width: 1000px) {
-  header-slide > div {
+  .header-slide {
     grid-template-columns: 5% 65% 10% 11% 9%;
   }
 }
 
 @media screen and (min-width: 700px) and (max-width: 900px) {
-  header-slide {
-    & > div {
-      grid-template-columns: 5% 61% 10% 12% 12%;
-      & > h1 {
-        font-size: 45px;
-      }
-      & > p {
-        width: 90%;
-      }
+  .header-slide {
+    grid-template-columns: 5% 61% 10% 12% 12%;
+    & > h1 {
+      font-size: 45px;
+    }
+    &__undertext {
+      width: 90%;
     }
   }
 }
 
 @media screen and (min-width: 492px) and (max-width: 700px) {
-  header-slide & > div {
+  .header-slide {
     grid-template-columns: 5% 55% 13% 15% 12%;
     & > h1 {
       font-size: 35px;
     }
-    & > p {
+    &__undertext {
       width: 90%;
       font-size: 17px;
     }
@@ -133,12 +127,12 @@ header-slide {
 }
 
 @media screen and (min-width: 320px) and (max-width: 491px) {
-  header-slide & > div {
+  .header-slide {
     grid-template-columns: 5% 33% 21% 25% 16%;
     & > h1 {
       font-size: 35px;
     }
-    & > p {
+    &__undertext {
       width: 90%;
       font-size: 17px;
     }
