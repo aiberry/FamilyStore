@@ -1,5 +1,6 @@
-<span class="product-item__options">
+<span class="product-item__options-selector">
   <p
+    class="product-item__selected-value"
     ng-click="$ctrl.item.displayOptions = $ctrl.toggleOptions($ctrl.item.displayOptions)"
   >
     {{$ctrl.item.options[0]}}{{$ctrl.item.selectedOption ? ': ' +
@@ -16,15 +17,16 @@
     ></i>
   </p>
 
-  <div ng-if="$ctrl.item.displayOptions">
+  <div ng-if="$ctrl.item.displayOptions" class="product-item__options-box">
     <p
       ng-repeat="option in $ctrl.item.options.slice(1)"
       ng-click="$ctrl.setOption(option, $ctrl.item)"
     >
       {{option}}
     </p>
-  </div></span
->
+  </div>
+</span>
+
 <img ng-src="./../assets/img/{{$ctrl.item.img}}.png" ng-if="$ctrl.item.img" />
 <span class="product-item__product-name">
   {{$ctrl.item.name}}
